@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Dashboard dark theme - applied globally */
+    --background: 152 40% 5%;
+    --foreground: 0 0% 100%;
+    --card: 152 30% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 152 30% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 150 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 152 20% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 152 20% 12%;
+    --muted-foreground: 152 20% 55%;
+    --accent: 150 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 100% 57%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 152 20% 18%;
+    --input: 152 20% 15%;
+    --ring: 150 100% 50%;
+    --chart-1: 150 100% 50%;
+    --chart-2: 152 30% 55%;
+    --chart-3: 0 100% 57%;
+    --chart-4: 152 20% 45%;
+    --chart-5: 150 80% 40%;
+    --radius: 0.75rem;
+    --sidebar-background: 152 40% 5%;
+    --sidebar-foreground: 152 20% 55%;
+    --sidebar-primary: 150 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 152 30% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 152 20% 18%;
+    --sidebar-ring: 150 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
