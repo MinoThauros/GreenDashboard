@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useCampaigns } from '@/lib/api/hooks'
 import { BaseCard, CardHeader, CardContent } from '@/components/primitives/base-card'
 import { ArrowUpRightIcon, LinkIcon, MoreVerticalIcon } from '@/components/icons'
@@ -31,12 +30,12 @@ export function CampaignsCard() {
             >
               <div className="flex items-center gap-3">
                 <div className="relative h-10 w-10 overflow-hidden rounded-lg bg-muted">
-                  <Image
-                    src={campaign.thumbnail || "/placeholder.svg"}
-                    alt={campaign.title}
-                    fill
-                    className="object-cover"
-                  />
+                <img
+                  src={campaign.thumbnail || "/placeholder.svg"}
+                  alt={campaign.title}
+                  className="h-full w-full object-cover"
+                />
+
                 </div>
                 <div>
                   <p className="text-sm font-medium text-foreground">{campaign.title}</p>

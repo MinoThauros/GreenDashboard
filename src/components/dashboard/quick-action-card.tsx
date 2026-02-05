@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from "@tanstack/react-router"
 import { cn } from '@/lib/utils'
 import { getIcon } from '@/components/icons'
 import type { QuickAction } from '@/lib/api/mock-data'
@@ -19,7 +19,7 @@ export function QuickActionCard({ action }: QuickActionCardProps) {
 
   return (
     <Link
-      href={routeMap[action.icon] || '/'}
+      to={routeMap[action.icon] || '/'}
       className={cn(
         'flex flex-col items-center justify-center rounded-xl border border-border bg-card p-4 transition-all',
         'hover:border-primary/50 hover:bg-muted'

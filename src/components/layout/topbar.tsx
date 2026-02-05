@@ -1,8 +1,8 @@
 'use client'
 
-import Image from 'next/image'
 import { useUserProfile } from '@/lib/api/hooks'
 import { HelpIcon, BellIcon } from '@/components/icons'
+import { Avatar, AvatarImage } from '../ui/avatar'
 
 export function TopBar() {
   const { data: user } = useUserProfile()
@@ -45,12 +45,10 @@ export function TopBar() {
 
         {/* User Avatar */}
         <div className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-primary">
-          <Image
-            src={user?.avatar || '/placeholder.svg?height=40&width=40&query=user+avatar'}
-            alt="User avatar"
-            fill
-            className="object-cover"
-          />
+          <Avatar>
+            <AvatarImage src={user?.avatar?? '/placeholder.svg?height=40&width=40&query=user+avatar'}/>
+        
+          </Avatar>
         </div>
       </div>
     </header>
