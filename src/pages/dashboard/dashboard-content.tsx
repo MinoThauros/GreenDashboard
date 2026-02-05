@@ -1,14 +1,13 @@
 'use client'
 
+import { CampaignsCard } from '@/components/dashboard/campaigns-card'
+import { ChannelHighlightsCard } from '@/components/dashboard/channel-highlights-card'
+import { PerformanceChart } from '@/components/dashboard/performance-chart'
+import { QuickActionCard } from '@/components/dashboard/quick-action-card'
+import { StatCard } from '@/components/dashboard/stat-card'
+import { TasksCard } from '@/components/dashboard/tasks-card'
 import { useStatCards, useQuickActions } from '@/lib/api/hooks'
-import {
-  StatCard,
-  QuickActionCard,
-  TasksCard,
-  CampaignsCard,
-  ChannelHighlightsCard,
-  PerformanceChart,
-} from '@/components/dashboard'
+
 
 export function DashboardContent() {
   const { data: statCards } = useStatCards()
